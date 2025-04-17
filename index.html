@@ -1,60 +1,160 @@
-<html>
-    <head>
-        <title>Minha página pessoal</title>
-    </head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal de um estudante de programação">
+    <title>Minha Página Pessoal</title>
     <style>
-        body{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: blanchedalmond;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            
         }
-        header{
-            background-color: aqua;
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #FFEBCD;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #00CED1;
             color: white;
-            padding: 20px;
+            padding: 2rem;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        main{
-            padding: 20px;
+
+        nav {
+            background-color: #008B8B;
+            padding: 1rem;
         }
-        section{
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
             background-color: white;
-            padding: 15px;
-            margin-bottom: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        h2{
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
             color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
-        ul{
+
+        ul {
             list-style-type: square;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #008B8B;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                padding: 1rem;
+            }
         }
     </style>
-    <body>
-        <header>
-            <h1>Bem-Vindo á minha pagina!</h1>
-                <p>Estudante de Programação</p>
-        </header>
-        <main>
-            <section>
-                <h2>Minhas habilidades</h2>
-                <ul>
-                    <li>Lógica de Programação</li>
-                    <li>HTML e CSS</li>
-                    <li>Trabalhos em Equipe</li>
-                    <li>Redes e IOT</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Cursos</h2>
-                <ul>
-                    <li>Curso de Introdução á Programação</li>
-                    <li>Curso De HTML e CSS Básico</li>
-                    <li>Curso de Arduino</li>
-                </ul>
-            </section>
-        </main>
-    </body>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Minha Página!</h1>
+        <p>Estudante de Programação</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="habilidades" aria-labelledby="habilidades-title">
+            <h2 id="habilidades-title">Minhas Habilidades</h2>
+            <ul>
+                <li>Lógica de Programação</li>
+                <li>HTML e CSS</li>
+                <li>Trabalhos em Equipe</li>
+                <li>Redes e IoT</li>
+            </ul>
+        </section>
+
+        <section id="cursos" aria-labelledby="cursos-title">
+            <h2 id="cursos-title">Cursos</h2>
+            <ul>
+                <li>Curso de Introdução à Programação</li>
+                <li>Curso de HTML e CSS Básico</li>
+                <li>Curso de Arduino</li>
+            </ul>
+        </section>
+
+        <section id="contato" aria-labelledby="contato-title">
+            <h2 id="contato-title">Contato</h2>
+            <p>Entre em contato comigo através do email: <a href="mailto:exemplo@email.com">exemplo@email.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minha Página Pessoal. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>
